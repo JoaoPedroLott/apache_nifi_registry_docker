@@ -1,0 +1,11 @@
+version: '3.7'
+services: 
+  
+  nifi_registry:
+    container_name: nifi_registry_2_0_0_m1
+    image:  apache/nifi-registry:2.0.0-M1
+    restart: unless-stopped
+    ports:
+      - 18080:18080
+    volumes:
+      - ./nifi_registry/conf:/opt/nifi-registry/nifi-registry-current/conf
